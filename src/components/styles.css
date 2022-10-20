@@ -1,0 +1,139 @@
+:root{
+    --light-blue-color: #2f74c0;
+}
+
+.input {
+    display: flex;
+    width: 95%;
+    position: relative;
+    align-items: center;
+}
+
+.input__box{
+    padding: 20px 30px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus{
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.input_submit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    right: 0%;
+    border-radius: 50px;
+    background-color: var(--light-blue-color);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px black;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    column-gap: 5px;
+}
+
+.input_submit:hover{
+    background-color: #388ae2;
+}
+
+.input_submit:active{
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+.todos{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(50, 195, 205);
+    padding: 15px;
+    border-radius: 5px;
+    width: 47.5%;
+}
+
+.todos__single {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: bisque;
+    transition: 0.2s;
+}
+
+.todos__single:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+}
+
+.todos__single--text{
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos__single--text:focus{
+    outline: none;
+}
+
+.remove{
+    background-color: rgb(235, 103, 80);
+}
+
+.dragged-over-active{
+    background-color: rgb(50, 180, 255);
+}
+.dragged-over-remove{
+    background-color: rgb(255, 50, 80);
+}
+
+.dragged {
+    box-shadow: 0 0 20px black;
+}
+
+.todos__heading{
+    font-size: 30px;
+    color: white;
+}
+.icon{
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    .todos {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10px;
+    }
+ 
+    input {
+        width: 95%;
+    }
+    .todos{
+        width: 95%;
+    }
+}
